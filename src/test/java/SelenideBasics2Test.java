@@ -17,7 +17,7 @@ public class SelenideBasics2Test {
     public void booksTask() {
         WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver();
-        driver.get("https://demoqa.com/books");
+        open("https://demoqa.com/books");
         driver.manage().window().maximize();
         $$(".rt-tr-group").
                 filterBy(Condition.and("Name", Condition.text("O'Reilly Media"), Condition.text("Javascript")));
